@@ -48,7 +48,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ## Arctic Code Quest: Python Edition - Day 1! @showdialog
 
 Welcome to your first Python project code along! Today you will be creating a project with a background image, 3 different sprites positioned across the screen, and 2 overlap functions that make something happen when the different sprites collide! Click Ok! to get started!
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ## Add a Background Image!
 
@@ -59,7 +59,7 @@ Add a background image for our winter-themed game!
 - :tree: To start, type ``||scene:scene||`` and a dot operator ``||.||``
 - :tree: Type **set** then select ``||scene:set_background_image||`` from the code completion tool.
 - :mouse pointer: Click on the palette to open the Gallery. ![Scene](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/DrawTool.png?raw=true "Draw Tool")
-- :mouse pointer: Select a background image from the Gallery or My Assets. ![Scene](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/MyAssets.png?raw=true "My Assets Tab")
+- :mouse pointer: Select a background image from the Gallery or My Assets. ![Scene](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/MyAssets.png?raw=true "My Assets Tab")
 - :mouse pointer: Click DONE at the bottom right of the screen!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
