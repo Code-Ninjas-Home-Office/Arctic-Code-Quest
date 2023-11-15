@@ -29,6 +29,7 @@ def on_overlap2(sprite, otherSprite):
     pass
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
+
 ```assetjson
 {
   "README.md": " ",
