@@ -21,12 +21,10 @@ penguin.follow(my_sprite, 20)
 # sprite overlaps
 def on_overlap(sprite, otherSprite):
     candyCane.set_position(randint(0,160), randint(0,120))
-    pass
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 
 def on_overlap2(sprite, otherSprite):
     game.game_over(False)
-    pass
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
 
@@ -233,9 +231,9 @@ Make something happen when the Player sprite runs into the Food sprite using an 
 
 - :paper plane: To make it easier to use the ``||sprites:on_overlap||`` function, click on ``||sprites:Sprites||`` in the code menu, then select this block and drag it into the coding canvas beneath the exisiting code:
 ![code](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/overlap%20code%20python.png?raw=true "overlap code image")
-- :mouse pointer: def means define, and defines the overlap function with 2 parameters: sprite and otherSprite. The code after the colon will run whenever the function is called, which happens on the line below the word "pass".
+- :mouse pointer: def means define, and defines the overlap function with 2 parameters: sprite and otherSprite. The code after the colon will run whenever the function is called.
 - :paper plane: On the line where the ``||sprites:on_overlap||`` function is called (*not where it is defined!*) replace the second ``||sprites:SpriteKind.player||`` with ``||sprites:SpriteKind.food||`` to make something happen when those 2 sprite kinds overlap. 
-- :paper plane: Inside the function definition, type ``||sprites:otherSprite||`` to reference the Food sprite, followed by a dot operator ``||.||`` and the ``||sprites:set_position||`` function.
+- :paper plane: Inside the function definition, delete the word "pass" then type ``||sprites:otherSprite||`` to reference the Food sprite, followed by a dot operator ``||.||`` and the ``||sprites:set_position||`` function.
 - :calculator: To set the Food sprite to a random position after each overlap, use ``||math: randint||`` for both the x and y parameters, setting the low and high range as 0 and 160 for x and 0 and 120 for y.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
@@ -264,7 +262,6 @@ def on_overlap(sprite, otherSprite):
     # @highlight
     candyCane.set_position(randint(0,160), randint(0,120))
     # @highlight
-    pass
 # @highlight
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 ```
@@ -275,7 +272,7 @@ Use another ``||sprites:on_overlap||`` function to end the game when the Enemy s
 
 ---
 - :paper plane: Drag another ``||sprites:on_overlap||`` function from the ``||sprites:Sprites||`` code menu. Update the Sprite Kinds to ``||sprites:Player||`` and ``||sprites:Enemy||``.
-- :circle: Inside, type ``||game:game||`` and a dot operator ``||.||`` then select ``||game:game_over||`` from the code completion tool.
+- :circle: Inside, delete "pass" and type ``||game:game||`` and a dot operator ``||.||`` then select ``||game:game_over||`` from the code completion tool.
 - :play: Click the Play button to see what happens when True is used in the ``||game:game_over||`` function. Then, see what happens when False is used.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
@@ -301,15 +298,12 @@ penguin.follow(my_sprite, 40)
 #sprite overlaps
 def on_overlap(sprite, otherSprite):
     candyCane.set_position(randint(0,160), randint(0,120))
-    pass
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 
 # @highlight
 def on_overlap2(sprite, otherSprite):
     # @highlight
     game.game_over(False)
-    # @highlight
-    pass
 # @highlight
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
