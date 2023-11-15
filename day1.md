@@ -58,11 +58,11 @@ Add a background image for our winter-themed game!
 
 - :tree: To start, type ``||scene:scene||`` and a dot operator ``||.||``
 - :tree: Type **set** then select ``||scene:set_background_image||`` from the code completion tool.
-- :mouse pointer: Click on the palette to open the Gallery. ![Scene](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/DrawTool.png?raw=true "Draw Tool")
+- :mouse pointer: Click on the palette to open the Gallery. ![Scene](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/DrawTool.png?raw=true "Draw Tool")
 - :mouse pointer: Select a background image from the Gallery or My Assets. ![Scene](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/MyAssets.png?raw=true "My Assets Tab")
 - :mouse pointer: Click DONE at the bottom right of the screen!
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -76,12 +76,12 @@ Let's add a sprite to that fancy background! A sprite is something that you inte
 
 - :paper plane: To start, type a variable name such as ``||sprites:my_sprite||`` to declare your sprite. Then type an assignment operator ``||=||``.
 - :paper plane: Start typing the function ``||sprites:sprites.create||`` then select the function name from the code completion tool.
-- :mouse pointer: Click on the palette to open the Gallery. ![Scene](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/DrawTool.png?raw=true "Draw Tool")
-- :mouse pointer: Select a sprite image from the Gallery or My Assets. ![Scene](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/MyAssets.png?raw=true "My Assets Tab")
+- :mouse pointer: Click on the palette to open the Gallery. ![Scene](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/DrawTool.png?raw=true "Draw Tool")
+- :mouse pointer: Select a sprite image from the Gallery or My Assets. ![Scene](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/MyAssets.png?raw=true "My Assets Tab")
 - :mouse pointer: Click DONE at the bottom right of the screen again!
 - :paper plane: Notice the ``||sprites:SpriteKind.player||`` parameter; leave it alone for now. You will change this for other sprites in the next step!
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -113,7 +113,7 @@ Now it's your turn! Using what you just learned, add 2 more sprites to your proj
 
 Great job: now you have 3 sprites in your game! But do you see an issue? They're all on top of each other! In the next step, you will change their positions!
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ## Set the sprite positions
 
@@ -137,7 +137,7 @@ To set a sprite's position in MakeCode, you will use **x-values** between **0-16
 
 💡 *Use code comments to specify where the code for each sprite exists in the code editor. Code comments in Python start with a # sign.*
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo")
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -172,7 +172,7 @@ Oh no! Your sprite can move off the screen! To fix this:
 - :paper plane: Type the name of your sprite, a dot operator ``||.||``, and select ``||sprites:set_stay_in_screen||``. 
 - :paper plane: Leave the parameter set to True so your Player sprite won't be able to leave the screen!
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -203,7 +203,7 @@ Making the Enemy sprite chase the Player sprite is really easy!
 - :keyboard: Change the speed the Enemy follows the Player by typing a comma in the parentheses after the Player sprite name, followed by a number.
 - :play: Click the Play button then tinker with the speed parameter to find a number that is just right!
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -232,13 +232,13 @@ Make something happen when the Player sprite runs into the Food sprite using an 
 ---
 
 - :paper plane: To make it easier to use the ``||sprites:on_overlap||`` function, click on ``||sprites:Sprites||`` in the code menu, then select this block and drag it into the coding canvas beneath the exisiting code:
-![code](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/overlap%20code%20python.png?raw=true "overlap code image")
+![code](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/overlap%20code%20python.png?raw=true "overlap code image")
 - :mouse pointer: def means define, and defines the overlap function with 2 parameters: sprite and otherSprite. The code after the colon will run whenever the function is called, which happens on the line below the word "pass".
 - :paper plane: On the line where the ``||sprites:on_overlap||`` function is called (*not where it is defined!*) replace the second ``||sprites:SpriteKind.player||`` with ``||sprites:SpriteKind.food||`` to make something happen when those 2 sprite kinds overlap. 
 - :paper plane: Inside the function definition, type ``||sprites:otherSprite||`` to reference the Food sprite, followed by a dot operator ``||.||`` and the ``||sprites:set_position||`` function.
 - :calculator: To set the Food sprite to a random position after each overlap, use ``||math: randint||`` for both the x and y parameters, setting the low and high range as 0 and 160 for x and 0 and 120 for y.
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -278,7 +278,7 @@ Use another ``||sprites:on_overlap||`` function to end the game when the Enemy s
 - :circle: Inside, type ``||game:game||`` and a dot operator ``||.||`` then select ``||game:game_over||`` from the code completion tool.
 - :play: Click the Play button to see what happens when True is used in the ``||game:game_over||`` function. Then, see what happens when False is used.
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
@@ -320,4 +320,4 @@ Congratulations! You just finished the Day 1 code along!
 
 Get ready because you are now going to use everything you just learned to create your own original project using Python!
 
-![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
+![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
