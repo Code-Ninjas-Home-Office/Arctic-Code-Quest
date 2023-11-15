@@ -8,7 +8,8 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "main.py"
+        "main.py",
+        "day1.md"
     ],
     "testFiles": [
         "test.ts"
