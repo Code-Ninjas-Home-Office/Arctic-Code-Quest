@@ -47,7 +47,9 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
 ## Arctic Code Quest: Python Edition - Day 2! @showdialog
 
-Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus score and life variables and functions, game update loops, music, and game over effects. Click Ok! to get started!
+Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus score and life variables and functions, game update loops, music, and game over effects. 
+
+Click ``||loops:Ok!||`` to get started!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
