@@ -5,11 +5,12 @@
         "device": "*"
     },
     "files": [
+        "main.py",
         "main.ts",
         "README.md",
         "assets.json",
-        "main.py",
-        "day1.md"
+        "day1.md",
+        "day2.md"
     ],
     "testFiles": [
         "test.ts"
