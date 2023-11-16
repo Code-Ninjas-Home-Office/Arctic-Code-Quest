@@ -60,7 +60,7 @@ scene.on_overlap_tile(SpriteKind.player, assets.tile("""ice"""), on_overlap_tile
 
 Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus tilemaps, tilemap functions, and for loops! 
 
-Click ``||loops:Ok!||`` to get started!
+Click ``||loops:Ok||`` to get started!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
