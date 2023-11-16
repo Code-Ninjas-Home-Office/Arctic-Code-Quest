@@ -58,7 +58,9 @@ scene.on_overlap_tile(SpriteKind.player, assets.tile("""ice"""), on_overlap_tile
 
 ## Arctic Code Quest: Python Edition - Day 3! @showdialog
 
-Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus tilemaps, tilemap functions, and for loops! Click Ok! to get started!
+Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus tilemaps, tilemap functions, and for loops! 
+
+Click ``||loops:Ok!||`` to get started!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
@@ -69,8 +71,8 @@ Create a maze for your sprites to move about using a tilemap!
 ---
 
 - :tree: Type ``||scene:tiles||``, a dot operator ``||.||``, and the ``||scene:set_current_tilemap||`` function. Pressing Tab will insert the ``||scene:(tilemap(""" """))||`` code into the function.
-- :map: Click the map icon to the left of the line of code, then design a tilemap that is at least **16x16** using any of the available tiles. 
-- :map: Add tiles that will function as a **path** for the sprite to walk along. Then add tiles that will serve as **walls**. Use the Draw Walls tool to turn those tiles into actual walls on the tilemap. ![Icon](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/draw%20walls.png?raw=true "Draw Walls tool")
+- :map: Click the map icon to the left of the line of code, then design a tilemap that is at least **16x16** using any of the available tiles. ![image](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/tilemap%20no%20walls.png?raw=true "tilemap no walls")
+- :map: Add tiles that will function as a **path** for the sprite to walk along. Then add tiles that will serve as **walls**. Use the Draw Walls tool to turn those tiles into actual walls on the tilemap. ![Icon](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/draw%20walls.png?raw=true "Draw Walls tool") ![image](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/tilemap%20walls.png?raw=true "tilemap walls")
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
@@ -278,7 +280,7 @@ Edit your tilemap to include a few new **trap** tiles that will take away all of
 
 ---
 
-- :tree: Open the tilemap editor and select a new tile, not already in the tilemap, to act as a **trap**. Replace a few of the path tiles with the new trap tile.
+- :tree: Open the tilemap editor and select a new tile, not already in the tilemap, to act as a **trap**. Replace a few of the path tiles with the new trap tile. ![image](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/tilemap%20trap%20tiles.png?raw=true "tilemap traps")
 - :tree: From the ``||scene:Scene||`` code menu, drag a ``||scene:on_overlap_tile||`` function into the coding editor.
 - :tree: Inside the ``||scene:on_overlap_tile||`` function definition, remove "pass" and add code to set the score back to 0 and play a sound effect.
 - :tree: In the ``||scene:on_overlap_tile||`` function call, set the first parameter to the Player sprite kind, and the second to the name of the new "trap" tile you just added to your project.
