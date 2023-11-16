@@ -47,7 +47,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 
 Welcome to your first Python project code along! Today you will be creating a project with a background image, 3 different sprites positioned across the screen, and 2 overlap functions that make something happen when the different sprites collide! 
 
-Click ``||loops:Ok!||`` to get started!
+Click ``||loops:Ok||`` to get started!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
