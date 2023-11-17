@@ -11,7 +11,8 @@
         "assets.json",
         "day1.md",
         "day2.md",
-        "day3.md"
+        "day3.md",
+        "day4.md"
     ],
     "testFiles": [
         "test.ts"
