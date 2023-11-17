@@ -1,4 +1,6 @@
 # Arctic Code Quest: Day 2
+### @diffs true
+
 ```python
 scene.set_background_image(assets.image("""skiBackground"""))
 
@@ -104,13 +106,10 @@ elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
-# @highlight
 def on_update_interval():
     gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
-    # @highlight
     gingerbread.set_velocity(0, 50)
-# @highlight
 game.on_update_interval(1500, on_update_interval)
 ```
 
@@ -167,17 +166,11 @@ def on_update_interval2():
 game.on_update_interval(2000, on_update_interval2)
 
 #overlap code
-# @highlight
 def on_overlap(sprite, otherSprite):
-    # @highlight
     sprites.destroy(otherSprite)
-# @highlight
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
-# @highlight
 def on_overlap2(sprite, otherSprite):
-    # @highlight
     sprites.destroy(otherSprite)
-# @highlight
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
 
@@ -197,7 +190,6 @@ Use MakeCode Arcade's built-in score variable to keep track of how many Food spr
 scene.set_background_image(assets.image("""skiBackground"""))
 
 #variable initialization
-# @highlight
 info.set_score(0)
 
 #player sprite
@@ -223,7 +215,6 @@ game.on_update_interval(2000, on_update_interval2)
 #overlap code
 def on_overlap(sprite, otherSprite):
     sprites.destroy(otherSprite)
-    # @highlight
     info.change_score_by(1)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 
@@ -290,14 +281,12 @@ game.on_update_interval(2000, on_update_interval2)
 def on_overlap(sprite, otherSprite):
     sprites.destroy(otherSprite)
     info.change_score_by(1)
-    # @highlight
     music.play(music.melody_playable(music.ba_ding), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 
 def on_overlap2(sprite, otherSprite):
     sprites.destroy(otherSprite)
     info.change_life_by(-1)
-    # @highlight
     music.play(music.melody_playable(music.power_down), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
@@ -334,13 +323,9 @@ def on_update_interval():
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
-# @highlight
 def on_score():
-    # @highlight
     game.set_game_over_effect(True, effects.blizzard)
-    # @highlight
     game.game_over(True)
-# @highlight
 info.on_score(20, on_score)
 
 #enemy sprite
