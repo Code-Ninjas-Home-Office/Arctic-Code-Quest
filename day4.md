@@ -621,7 +621,7 @@ def on_overlap_tile(sprite, location):
 scene.on_overlap_tile(SpriteKind.player, assets.tile("""snowPath13"""), on_overlap_tile)
 ```
 
-## At a splash screen at the beginning!
+## Add a splash screen at the beginning!
 
 Use a splash screen to display a message at the beginning of the game, letting the player know how to play your game!
 
