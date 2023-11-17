@@ -3,22 +3,22 @@
 ```python
 scene.set_background_image(assets.image("""skyBackground"""))
 
-# player sprite
+#player sprite
 my_sprite = sprites.create(assets.image("""girlFront"""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
-# food sprite
+#food sprite
 candyCane = sprites.create(assets.image("""candycane"""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
-# enemy sprite
+#enemy sprite
 penguin = sprites.create(assets.image("""penguinFront"""), SpriteKind.enemy)
 penguin.set_position(100, 10)
-penguin.follow(my_sprite, 20)
+penguin.follow(my_sprite, 40)
 
-# sprite overlaps
+#sprite overlaps
 def on_overlap(sprite, otherSprite):
     candyCane.set_position(randint(0,160), randint(0,120))
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
