@@ -12,7 +12,8 @@
         "day1.md",
         "day2.md",
         "day3.md",
-        "day4.md"
+        "day4.md",
+        "day1-a.md"
     ],
     "testFiles": [
         "test.ts"
