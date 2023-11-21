@@ -2,20 +2,20 @@
 ### @diffs true
 
 ```python
-scene.set_background_image(winterImg.skyBackground))
+scene.set_background_image(img("""..."""))
 
 #player sprite
-my_sprite = sprites.create(winterImg.girlFront, SpriteKind.player)
+let my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
 #food sprite
-candyCane = sprites.create(winterImg.candycane), SpriteKind.food)
+let candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-penguin = sprites.create(winterImg.penguinFront), SpriteKind.enemy)
+let penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 penguin.follow(my_sprite, 40)
 
@@ -51,7 +51,7 @@ Add a background image for our winter-themed game!
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 ```
 
 ## Add your first sprite!
@@ -69,9 +69,9 @@ Let's add a sprite to that fancy background! A sprite is something that you inte
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 #player sprite
-my_sprite = sprites.create(img"""...""", SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 ```
 
 ## Challenge Time!
@@ -124,18 +124,18 @@ To set a sprite's position in MakeCode, you will use **x-values** between **0-16
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-my_sprite = sprites.create(img"""...""", SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 
 #food sprite
-candyCane = sprites.create(img"""...""", SpriteKind.food)
+candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-penguin = sprites.create(img"""...""", SpriteKind.enemy)
+penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 ```
 
@@ -156,20 +156,20 @@ Oh no! Your sprite can move off the screen! To fix this:
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-my_sprite = sprites.create(img"""...""", SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
 #food sprite
-candyCane = sprites.create(img"""...""", SpriteKind.food)
+candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-penguin = sprites.create(img"""...""", SpriteKind.enemy)
+penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 ```
 
@@ -185,20 +185,20 @@ Making the Enemy sprite chase the Player sprite is really easy!
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-my_sprite = sprites.create(img"""...""", SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
 #food sprite
-candyCane = sprites.create(img"""...""", SpriteKind.food)
+candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-penguin = sprites.create(img"""...""", SpriteKind.enemy)
+penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 penguin.follow(my_sprite, 40)
 ```
@@ -219,20 +219,20 @@ Make something happen when the Player sprite runs into the Food sprite using an 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-my_sprite = sprites.create(img"""...""", SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
 #food sprite
-candyCane = sprites.create(img"""...""", SpriteKind.food)
+candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-penguin = sprites.create(img"""...""", SpriteKind.enemy)
+penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 penguin.follow(my_sprite, 40)
 
@@ -254,20 +254,20 @@ Use another ``||sprites:on_overlap||`` function to end the game when the Enemy s
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-my_sprite = sprites.create(img"""...""", SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
 #food sprite
-candyCane = sprites.create(img"""...""", SpriteKind.food)
+candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-penguin = sprites.create(img"""...""", SpriteKind.enemy)
+penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 penguin.follow(my_sprite, 40)
 
