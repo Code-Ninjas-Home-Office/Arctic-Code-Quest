@@ -485,5 +485,4 @@ Get ready because you are now going to use everything you just learned to create
 
 ```package
 winterImg=github:Code-Ninjas-Home-Office/winter-assets-image-pack
-winterTile=github:Code-Ninjas-Home-Office/winter-assets-tile-image-pack
 ```
