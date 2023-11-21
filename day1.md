@@ -5,17 +5,17 @@
 scene.set_background_image(img("""..."""))
 
 #player sprite
-let my_sprite = sprites.create(img("""..."""), SpriteKind.player)
+my_sprite = sprites.create(img("""..."""), SpriteKind.player)
 my_sprite.set_position(50, 50)
 controller.move_sprite(my_sprite)
 my_sprite.set_stay_in_screen(True)
 
 #food sprite
-let candyCane = sprites.create(img("""..."""), SpriteKind.food)
+candyCane = sprites.create(img("""..."""), SpriteKind.food)
 candyCane.set_position(100, 100)
 
 #enemy sprite
-let penguin = sprites.create(img("""..."""), SpriteKind.enemy)
+penguin = sprites.create(img("""..."""), SpriteKind.enemy)
 penguin.set_position(100, 10)
 penguin.follow(my_sprite, 40)
 
