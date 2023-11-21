@@ -2,21 +2,21 @@
 ### @diffs true
 
 ```python
-scene.set_background_image(winterImg.skiBackground)
+scene.set_background_image(img("""..."""))
 
 #variable initialization
 info.set_score(0)
 info.set_life(3)
 
 #player sprite
-elf = sprites.create(winterImg.elfFront, SpriteKind.player)
+let elf = sprites.create(img("""..."""), SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(winterImg.gingerbread, SpriteKind.food)
+    gingerbread = sprites.create(img("""..."""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
@@ -28,7 +28,7 @@ info.on_score(20, on_score)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(winterImg.snowball, SpriteKind.enemy)
+    snowball = sprites.create(img("""..."""), SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -82,17 +82,17 @@ Let's make Food sprites that appear at the top of the screen then fall to the bo
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-elf = sprites.create(img"""...""", SpriteKind.player)
+elf = sprites.create(img("""..."""), SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(img"""...""", SpriteKind.food)
+    gingerbread = sprites.create(img("""..."""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
@@ -128,24 +128,24 @@ Destroy the Food and Enemy sprites when they overlap the Player sprite!
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #player sprite
-elf = sprites.create(img"""...""", SpriteKind.player)
+elf = sprites.create(img("""..."""), SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(img"""...""", SpriteKind.food)
+    gingerbread = sprites.create(img("""..."""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(img"""...""", SpriteKind.enemy)
+    snowball = sprites.create(img("""..."""), SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -173,27 +173,27 @@ Use MakeCode Arcade's built-in score variable to keep track of how many Food spr
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #variable initialization
 info.set_score(0)
 
 #player sprite
-elf = sprites.create(img"""...""", SpriteKind.player)
+elf = sprites.create(img("""..."""), SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(img"""...""", SpriteKind.food)
+    gingerbread = sprites.create(img("""..."""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(img"""...""", SpriteKind.enemy)
+    snowball = sprites.create(img("""..."""), SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -237,28 +237,28 @@ Add different sound effects that will play when the Player catches a Food or Ene
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #variable initialization
 info.set_score(0)
 info.set_life(3)
 
 #player sprite
-elf = sprites.create(img"""...""", SpriteKind.player)
+elf = sprites.create(img("""..."""), SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(img"""...""", SpriteKind.food)
+    gingerbread = sprites.create(img("""..."""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(img"""...""", SpriteKind.enemy)
+    snowball = sprites.create(img("""..."""), SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -291,21 +291,21 @@ There's no way to win the game unless you add code to end at a certain score!
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
 
 ```python
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 
 #variable initialization
 info.set_score(0)
 info.set_life(3)
 
 #player sprite
-elf = sprites.create(img"""...""", SpriteKind.player)
+elf = sprites.create(img("""..."""), SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(img"""...""", SpriteKind.food)
+    gingerbread = sprites.create(img("""..."""), SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
@@ -316,7 +316,7 @@ info.on_score(20, on_score)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(img"""...""", SpriteKind.enemy)
+    snowball = sprites.create(img("""..."""), SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
