@@ -2,21 +2,21 @@
 ### @diffs true
 
 ```python
-scene.set_background_image(assets.image("""skiBackground"""))
+scene.set_background_image(winterImg.skiBackground)
 
 #variable initialization
 info.set_score(0)
 info.set_life(3)
 
 #player sprite
-elf = sprites.create(assets.image("""elfFront"""), SpriteKind.player)
+elf = sprites.create(winterImg.elfFront, SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
+    gingerbread = sprites.create(winterImg.gingerbread, SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
@@ -24,12 +24,11 @@ game.on_update_interval(1500, on_update_interval)
 def on_score():
     game.set_game_over_effect(True, effects.blizzard)
     game.game_over(True)
-    pass
 info.on_score(20, on_score)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(assets.image("""snowball"""), SpriteKind.enemy)
+    snowball = sprites.create(winterImg.snowball, SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -60,8 +59,8 @@ Click ``||loops:Ok||`` to get started!
 ## Add a Background Image and a Player sprite!
 
 See if you remember how to code these things in a project:
-- :tree: Add a ``||scene:background image||`` from the Gallery or My Assets.
-- :paper plane: Add a ``||sprites:Player sprite||`` using an image from the Gallery or My Assets.
+- :tree: Add a ``||scene:background image||`` from the Gallery.
+- :paper plane: Add a ``||sprites:Player sprite||`` using an image from the Gallery.
 - :paper plane: Set the Player sprite's ``||sprites:position||`` so it appears along the bottom middle of the screen.
 - :game controller: Set the Player sprite to only move left to right along the x-axis. Inside the parentheses of the ``||controller:move_sprite||`` function, add a comma next to the Player sprite variable name, then type **100** as the **vx** parameter, or speed the sprite can move left and right. Add another comma then type **0** as the **vy** parameter, or speed the sprite can move up and down.
 - :paper plane: Set the Player sprite to ``||sprites:stay_in_screen||``.
@@ -77,23 +76,23 @@ Let's make Food sprites that appear at the top of the screen then fall to the bo
 - :circle: To make it easier to use the ``||game:on_update_interval||`` loop, click on ``||game:Game||`` in the code menu, then select this block and drag it into the coding canvas beneath the existing code: ![block](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/game%20update%20interval.png?raw=true "game update block") 
 - :paper plane: Inside the function definition, delete "pass" then create a Food sprite using an image from the Gallery or My Assets.
 - :paper plane: Set the Food sprite's ``||sprites:position||`` using ``||math:randint||`` to set a random x-value between 0 and 160. Set the y-value to 0 so the sprite always starts at the top of the screen.
-- :paper plane: To make the Food sprite move, type the sprite's name, a dot ``||.||``, and select ``||sprites:set_velocity||`` from the code completion tool. Set the **vx** parameter to **0** and the **vy** parameter to **50** so the Food sprite moves in a downward direction.
+- :paper plane: To make the Food sprite move, type the sprite's name, a dot ``||sprites:.||``, and select ``||sprites:set_velocity||`` from the code completion tool. Set the **vx** parameter to **0** and the **vy** parameter to **50** so the Food sprite moves in a downward direction.
 - :circle: On the last line - the loop's function call - adjust the ``||game:interval parameter||`` to change how often the Food sprite appears then falls. This number is in milliseconds, so 1000ms equals 1 second!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(assets.image("""skiBackground"""))
+scene.set_background_image(img"""...""")
 
 #player sprite
-elf = sprites.create(assets.image("""elfFront"""), SpriteKind.player)
+elf = sprites.create(img"""...""", SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
+    gingerbread = sprites.create(img"""...""", SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
@@ -129,24 +128,24 @@ Destroy the Food and Enemy sprites when they overlap the Player sprite!
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
 
 ```python
-scene.set_background_image(assets.image("""skiBackground"""))
+scene.set_background_image(img"""...""")
 
 #player sprite
-elf = sprites.create(assets.image("""elfFront"""), SpriteKind.player)
+elf = sprites.create(img"""...""", SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
+    gingerbread = sprites.create(img"""...""", SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(assets.image("""snowball"""), SpriteKind.enemy)
+    snowball = sprites.create(img"""...""", SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -155,6 +154,7 @@ game.on_update_interval(2000, on_update_interval2)
 def on_overlap(sprite, otherSprite):
     sprites.destroy(otherSprite)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
+
 def on_overlap2(sprite, otherSprite):
     sprites.destroy(otherSprite)
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
@@ -166,34 +166,34 @@ Use MakeCode Arcade's built-in score variable to keep track of how many Food spr
 
 ---
 
-- :id card: At the top of the code editor, below the code that sets the background image, type ``||info:info||`` and a dot operator ``||.||`` followed by ``||info:set_score||``. This will set the score to 0 and place the score label in the upper right part of the screen.
+- :id card: At the top of the code editor, below the code that sets the background image, type ``||info:info||`` and a dot operator ``||info:.||`` followed by ``||info:set_score||``. This will set the score to 0 and place the score label in the upper right part of the screen.
 - :id card: Inside the Player / Food ``||sprites:on_overlap||`` function, under the ``||sprites:destroy||`` code, type ``||info:info||`` and a dot operator ``||.||`` followed by ``||info:change_score_by||``. 
 - :play: Click the Play button to test the score feature, ensuring it increases each time the Player sprite catches a Food sprite!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(assets.image("""skiBackground"""))
+scene.set_background_image(img"""...""")
 
 #variable initialization
 info.set_score(0)
 
 #player sprite
-elf = sprites.create(assets.image("""elfFront"""), SpriteKind.player)
+elf = sprites.create(img"""...""", SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
+    gingerbread = sprites.create(img"""...""", SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(assets.image("""snowball"""), SpriteKind.enemy)
+    snowball = sprites.create(img"""...""", SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -237,28 +237,28 @@ Add different sound effects that will play when the Player catches a Food or Ene
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
 ```python
-scene.set_background_image(assets.image("""skiBackground"""))
+scene.set_background_image(img"""...""")
 
 #variable initialization
 info.set_score(0)
 info.set_life(3)
 
 #player sprite
-elf = sprites.create(assets.image("""elfFront"""), SpriteKind.player)
+elf = sprites.create(img"""...""", SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
+    gingerbread = sprites.create(img"""...""", SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(assets.image("""snowball"""), SpriteKind.enemy)
+    snowball = sprites.create(img"""...""", SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -291,21 +291,21 @@ There's no way to win the game unless you add code to end at a certain score!
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
 
 ```python
-scene.set_background_image(assets.image("""skiBackground"""))
+scene.set_background_image(img"""...""")
 
 #variable initialization
 info.set_score(0)
 info.set_life(3)
 
 #player sprite
-elf = sprites.create(assets.image("""elfFront"""), SpriteKind.player)
+elf = sprites.create(img"""...""", SpriteKind.player)
 elf.set_position(80, 120)
 elf.set_stay_in_screen(True)
 controller.move_sprite(elf, 100, 0)
 
 #food sprite
 def on_update_interval():
-    gingerbread = sprites.create(assets.image("""gingerbread"""), SpriteKind.food)
+    gingerbread = sprites.create(img"""...""", SpriteKind.food)
     gingerbread.set_position(randint(0, 160), 0)
     gingerbread.set_velocity(0, 50)
 game.on_update_interval(1500, on_update_interval)
@@ -316,7 +316,7 @@ info.on_score(20, on_score)
 
 #enemy sprite
 def on_update_interval2():
-    snowball = sprites.create(assets.image("""snowball"""), SpriteKind.enemy)
+    snowball = sprites.create(img"""...""", SpriteKind.enemy)
     snowball.set_position(randint(0, 160), 0)
     snowball.set_velocity(0, 50)
 game.on_update_interval(2000, on_update_interval2)
@@ -342,3 +342,7 @@ Congratulations! You just finished the Day 2 code along!
 Get ready because you are now going to use everything you just learned to create your own original project using Python!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
+
+```package
+winterImg=github:Code-Ninjas-Home-Office/winter-assets-image-pack
+```
