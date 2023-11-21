@@ -167,7 +167,7 @@ Use MakeCode Arcade's built-in score variable to keep track of how many Food spr
 ---
 
 - :id card: At the top of the code editor, below the code that sets the background image, type ``||info:info||`` and a dot operator ``||info:.||`` followed by ``||info:set_score||``. This will set the score to 0 and place the score label in the upper right part of the screen.
-- :id card: Inside the Player / Food ``||sprites:on_overlap||`` function, under the ``||sprites:destroy||`` code, type ``||info:info||`` and a dot operator ``||.||`` followed by ``||info:change_score_by||``. 
+- :id card: Inside the Player / Food ``||sprites:on_overlap||`` function, under the ``||sprites:destroy||`` code, type ``||info:info||`` and a dot operator ``||info:.||`` followed by ``||info:change_score_by||``. 
 - :play: Click the Play button to test the score feature, ensuring it increases each time the Player sprite catches a Food sprite!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
