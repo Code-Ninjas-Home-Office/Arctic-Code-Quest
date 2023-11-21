@@ -14,15 +14,15 @@ info.set_life(3)
 info.start_countdown(30)
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(winterImg.boyFront, SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(winterImg.candycane, SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, winterTile.snowPath16)
 
 def on_score():
     game.set_game_over_effect(True, effects.smiles)
@@ -31,14 +31,14 @@ info.on_score(10, on_score)
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(winterImg.bearFront, SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, winterTile.snowPath16)
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 
 #overlap events
 def on_overlap(sprite, otherSprite):
-    tiles.place_on_random_tile(otherSprite, assets.tile("""snowPath16"""))
+    tiles.place_on_random_tile(otherSprite, winterTile.snowPath16)
     info.change_score_by(1)
     music.play(music.melody_playable(music.ba_ding), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
@@ -52,7 +52,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 def on_overlap_tile(sprite, location):
     info.set_score(0)
     music.play(music.melody_playable(music.knock), music.PlaybackMode.UNTIL_DONE)
-scene.on_overlap_tile(SpriteKind.player, assets.tile("""ice"""), on_overlap_tile)
+scene.on_overlap_tile(SpriteKind.player, assets.tile"""...""", on_overlap_tile)
 ```
 
 ## Arctic Code Quest: Python Edition - Day 3! @showdialog
@@ -69,7 +69,7 @@ Create a maze for your sprites to move about using a tilemap!
 
 ---
 
-- :tree: Type ``||scene:tiles||``, a dot operator ``||.||``, and the ``||scene:set_current_tilemap||`` function. Pressing Tab will insert the ``||scene:(tilemap(""" """))||`` code into the function.
+- :tree: Type ``||scene:tiles||``, a dot operator ``||scene:.||``, and the ``||scene:set_current_tilemap||`` function. Pressing Tab will insert the ``||scene:(tilemap(""" """))||`` code into the function.
 - :map: Click the map icon to the left of the line of code, then design a tilemap that is at least **16x16** using any of the available tiles. ![image](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/tilemap%20no%20walls.png?raw=true "tilemap no walls")
 - :map: Add tiles that will function as a **path** for the sprite to walk along. Then add tiles that will serve as **walls**. Use the Draw Walls tool to turn those tiles into actual walls on the tilemap. ![Icon](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/draw%20walls.png?raw=true "Draw Walls tool") ![image](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/tilemap%20walls.png?raw=true "tilemap walls")
 
@@ -86,7 +86,7 @@ Add a Player sprite to the project to navigate the tilemap maze!
 ---
 
 - :paper plane: Add a Player sprite to the project.
-- :tree: Position the Player sprite on a specific tile location by typing ``||scene:tiles||``, a dot operator ``||.||``, and ``||scene:place_on_tile||``. Replace the first parameter with the Player sprite variable name.
+- :tree: Position the Player sprite on a specific tile location by typing ``||scene:tiles||``, a dot operator ``||scene:.||``, and ``||scene:place_on_tile||``. Replace the first parameter with the Player sprite variable name.
 - :tree: Tinker with the tilemap coordinates in ``||scene:tiles.get_tile_location||`` to place the Player sprite on a maze path tile - not on a wall!
 - :game controller: Add code to move the Player sprite around the tilemap.
 - :tree: Oh no! The Player sprite moves off the tilemap! From ``||scene:Scene||`` use the ``||scene:camera_follow_sprite||`` function to ensure the camera follows the Player sprite around the tilemap.
@@ -97,7 +97,7 @@ Add a Player sprite to the project to navigate the tilemap maze!
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
@@ -109,7 +109,7 @@ Use a **for loop** to create multiple Food sprites for the Player sprite to coll
 
 - :repeat: Using the ``||loops:Loops||`` code menu or the code completion tool, add a **for loop** that looks like this: ``||loops:for i in range(8):||``. Don't forget the colon **:** at the end of the statement!
 - :paper plane: Indented inside the **for loop**, add code to create a Food sprite.
-- :tree: Position the Food sprites on random path tiles throughout the maze by typing ``||scene:tiles||``, a dot operator ``||.||``. and ``||scene:place_on_random_tile||``. Replace the first parameter with the Food sprite variable name.
+- :tree: Position the Food sprites on random path tiles throughout the maze by typing ``||scene:tiles||``, a dot operator ``||scene:.||``. and ``||scene:place_on_random_tile||``. Replace the first parameter with the Food sprite variable name.
 - :tree:  Click the palette icon or find the tile name from the tilemap editor or Assets tab to use as the tile parameter.
 - :play: Click the Play button to test the Food sprite code, ensuring multiple Food sprites are positioned on different tiles throughout the maze. 
 
@@ -121,15 +121,15 @@ Use a **for loop** to create multiple Food sprites for the Player sprite to coll
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 ```
 
 ## Challenge: Create multiple moving Enemy sprites!
@@ -147,7 +147,7 @@ Use what you just learned to create multiple Enemy sprites on the tilemap using 
 ---
 
 - :paper plane: Add code to the Enemy sprite's for loop that sets each Enemy sprite's ``||sprites:velocity||`` to random vx and vy values from a range of -50 to 50.
-- :paper plane: To ensure Enemy sprites don't get stuck on a tilemap wall, type the Enemy sprite variable name, a ``||.||``, and a ``||sprites:set_bounce_on_wall||`` function set to True.
+- :paper plane: To ensure Enemy sprites don't get stuck on a tilemap wall, type the Enemy sprite variable name, a ``||sprites:.||``, and a ``||sprites:set_bounce_on_wall||`` function set to True.
 - :play: Click the Play button to test the Enemy sprite code, ensuring multiple Enemy sprites are positioned on different tiles and moving throughout the maze. 
 
 *Consider updating your tilemap design if there are not enough tiles of the same kind for all of the Enemy sprites!*
@@ -158,20 +158,20 @@ Use what you just learned to create multiple Enemy sprites on the tilemap using 
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 ```
@@ -193,26 +193,26 @@ Make something happen when the Player sprite overlaps the Food and Enemy sprites
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""..."""), SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 
 #overlap events
 def on_overlap(sprite, otherSprite):
-    tiles.place_on_random_tile(otherSprite, assets.tile("""snowPath16"""))
+    tiles.place_on_random_tile(otherSprite, assets.tile("""..."""))
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 
 def on_overlap2(sprite, otherSprite):
@@ -242,26 +242,26 @@ info.set_score(0)
 info.set_life(3)
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 
 #overlap events
 def on_overlap(sprite, otherSprite):
-    tiles.place_on_random_tile(otherSprite, assets.tile("""snowPath16"""))
+    tiles.place_on_random_tile(otherSprite, assets.tile("""..."""))
     info.change_score_by(1)
     music.play(music.melody_playable(music.ba_ding), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
@@ -296,26 +296,26 @@ info.set_score(0)
 info.set_life(3)
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 
 #overlap events
 def on_overlap(sprite, otherSprite):
-    tiles.place_on_random_tile(otherSprite, assets.tile("""snowPath16"""))
+    tiles.place_on_random_tile(otherSprite, assets.tile("""..."""))
     info.change_score_by(1)
     music.play(music.melody_playable(music.ba_ding), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
@@ -329,7 +329,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 def on_overlap_tile(sprite, location):
     info.set_score(0)
     music.play(music.melody_playable(music.knock), music.PlaybackMode.UNTIL_DONE)
-scene.on_overlap_tile(SpriteKind.player, assets.tile("""ice"""), on_overlap_tile)
+scene.on_overlap_tile(SpriteKind.player, assets.tile("""..."""), on_overlap_tile)
 ```
 
 ## Create the Game Over conditions!
@@ -358,26 +358,26 @@ def on_score():
 info.on_score(10, on_score)
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 
 #overlap events
 def on_overlap(sprite, otherSprite):
-    tiles.place_on_random_tile(otherSprite, assets.tile("""snowPath16"""))
+    tiles.place_on_random_tile(otherSprite, assets.tile("""..."""))
     info.change_score_by(1)
     music.play(music.melody_playable(music.ba_ding), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
@@ -391,7 +391,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 def on_overlap_tile(sprite, location):
     info.set_score(0)
     music.play(music.melody_playable(music.knock), music.PlaybackMode.UNTIL_DONE)
-scene.on_overlap_tile(SpriteKind.player, assets.tile("""ice"""), on_overlap_tile)
+scene.on_overlap_tile(SpriteKind.player, assets.tile("""..."""), on_overlap_tile)
 ```
 
 ## Add a splash screen at the beginning!
@@ -424,26 +424,26 @@ def on_score():
 info.on_score(10, on_score)
 
 #player sprite
-playerSprite = sprites.create(assets.image("""boyFront"""), SpriteKind.player)
+playerSprite = sprites.create(img"""...""", SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(assets.image("""candycane"""), SpriteKind.food)
-    tiles.place_on_random_tile(candySprite, assets.tile("""snowPath16"""))
+    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(assets.image("""bearFront"""), SpriteKind.enemy)
-    tiles.place_on_random_tile(enemySprite, assets.tile("""snowPath16"""))
+    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
 
 #overlap events
 def on_overlap(sprite, otherSprite):
-    tiles.place_on_random_tile(otherSprite, assets.tile("""snowPath16"""))
+    tiles.place_on_random_tile(otherSprite, assets.tile("""..."""))
     info.change_score_by(1)
     music.play(music.melody_playable(music.ba_ding), music.PlaybackMode.UNTIL_DONE)
 sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
@@ -457,7 +457,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 def on_overlap_tile(sprite, location):
     info.set_score(0)
     music.play(music.melody_playable(music.knock), music.PlaybackMode.UNTIL_DONE)
-scene.on_overlap_tile(SpriteKind.player, assets.tile("""ice"""), on_overlap_tile)
+scene.on_overlap_tile(SpriteKind.player, assets.tile("""..."""), on_overlap_tile)
 ```
 
 ## Finishing your game!
@@ -467,3 +467,8 @@ Congratulations! You just finished the Day 3 code along!
 Get ready because you are now going to use everything you just learned to create your own original project using Python!
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
+
+```package
+winterImg=github:Code-Ninjas-Home-Office/winter-assets-image-pack
+winterTile=github:Code-Ninjas-Home-Office/winter-assets-tile-image-pack
+```
