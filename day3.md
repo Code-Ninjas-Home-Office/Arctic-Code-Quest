@@ -112,7 +112,7 @@ Add a Player sprite to the project to navigate the tilemap maze!
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
@@ -136,14 +136,14 @@ Use a **for loop** to create multiple Food sprites for the Player sprite to coll
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    candySprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 ```
 
@@ -173,19 +173,19 @@ Use what you just learned to create multiple Enemy sprites on the tilemap using 
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    candySprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    enemySprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
@@ -208,19 +208,19 @@ Make something happen when the Player sprite overlaps the Food and Enemy sprites
 tiles.set_current_tilemap(tilemap("""level"""))
 
 #player sprite
-playerSprite = sprites.create(img"""..."""), SpriteKind.player)
+playerSprite = sprites.create(img("""...""")), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""..."""), SpriteKind.food)
+    candySprite = sprites.create(img("""...""")), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    enemySprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
@@ -257,19 +257,19 @@ info.set_score(0)
 info.set_life(3)
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    candySprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    enemySprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
@@ -311,19 +311,19 @@ info.set_score(0)
 info.set_life(3)
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    candySprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    enemySprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
@@ -373,19 +373,19 @@ def on_score():
 info.on_score(10, on_score)
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    candySprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    enemySprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
@@ -439,19 +439,19 @@ def on_score():
 info.on_score(10, on_score)
 
 #player sprite
-playerSprite = sprites.create(img"""...""", SpriteKind.player)
+playerSprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(playerSprite, tiles.get_tile_location(1, 18))
 controller.move_sprite(playerSprite)
 scene.camera_follow_sprite(playerSprite)
 
 #food sprite
 for i in range(8):
-    candySprite = sprites.create(img"""...""", SpriteKind.food)
+    candySprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_random_tile(candySprite, assets.tile("""..."""))
 
 #enemy sprite
 for i in range(8):
-    enemySprite = sprites.create(img"""...""", SpriteKind.enemy)
+    enemySprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_random_tile(enemySprite, assets.tile("""..."""))
     enemySprite.set_velocity(randint(-50,50), randint(-50,50))
     enemySprite.set_bounce_on_wall(True)
