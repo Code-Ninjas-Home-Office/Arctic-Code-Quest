@@ -198,8 +198,8 @@ Make something happen when the Player sprite overlaps the Food and Enemy sprites
 - :paper plane: Using the ``||sprites:on_overlap||`` code from the menu or the code completion tool, create 2 different functions: 1 for the Player and Enemy overlap and 1 for the Player and Food overlap.
 - :paper plane: Inside the **Player/Enemy** overlap function, delete "pass" then type ``||sprites:sprites.destroy||`` to remove the Enemy sprite when it overlaps the Player sprite.
 - :paper plane: Replace ``||sprites:mySprite||`` inside the parentheses with the ``||sprites:otherSprite||`` parameter from the ``||sprites:on_overlap||`` function. This will now destroy *any* Enemy sprite that overlaps the Player sprite.
-- :tree: Inside the **Player/Food** overlap function, delete "pass" then type ``||tiles.place_on_random_tile||`` to move the Food sprite to a different tile.
-- :paper plane: Replace ``||sprites:none|`` inside the parentheses with the ``||sprites:otherSprite||`` parameter from the ``||sprites:on_overlap||`` function. This will now reposition *any* Food sprite that overlaps the Player sprite.
+- :tree: Inside the **Player/Food** overlap function, delete "pass" then type ``||scene:tiles.place_on_random_tile||`` to move the Food sprite to a different tile.
+- :paper plane: Replace **none** inside the parentheses with the ``||sprites:otherSprite||`` parameter from the ``||sprites:on_overlap||`` function. This will now reposition *any* Food sprite that overlaps the Player sprite.
 - :play: Click the Play button to test the overlap function code on both Food and Enemy sprites before moving on to the next step.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/CN-Logo.png?raw=true "CN Logo")
