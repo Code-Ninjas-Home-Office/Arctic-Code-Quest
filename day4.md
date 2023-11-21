@@ -101,7 +101,7 @@ Use a background color or image to add a backdrop for your 2D Platformer tilemap
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 ```
 
@@ -120,11 +120,11 @@ Add a Player sprite to the project to navigate the 2D tilemap!
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -148,11 +148,11 @@ Using simple physics, code the Player sprite to jump up when the A button is pre
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -180,11 +180,11 @@ Add a **conditional** to your A button code to prevent the Player sprite from "d
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -210,11 +210,11 @@ Use different right- and left-facing images so the Player sprite appears to be f
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -227,11 +227,11 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 ```
 
@@ -255,11 +255,11 @@ Use **spawn tiles** and ``||loops:for||`` loops to place Food sprites throughout
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -272,16 +272,16 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 ```
@@ -304,11 +304,11 @@ Use what you just learned to create multiple Enemy sprites on the tilemap using 
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -321,22 +321,22 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 
 # enemy sprites
 for value2 in tiles.get_tiles_by_type(assets.tile("""...""")):
-    cookie_sprite = sprites.create(img"""...""", SpriteKind.enemy)
+    cookie_sprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_tile(cookie_sprite, value2)
     tiles.set_tile_at(value2, assets.tile("""transparency16"""))
 ```
@@ -355,11 +355,11 @@ Make something happen when the Player sprite overlaps the Food and Enemy sprites
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -372,22 +372,22 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 
 # enemy sprites
 for value2 in tiles.get_tiles_by_type(assets.tile("""...""")):
-    cookie_sprite = sprites.create(img"""...""", SpriteKind.enemy)
+    cookie_sprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_tile(cookie_sprite, value2)
     tiles.set_tile_at(value2, assets.tile("""transparency16"""))
 
@@ -419,11 +419,11 @@ Use a **conditional** to end the game when all of the Food sprites have been col
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -436,22 +436,22 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 
 # enemy sprites
 for value2 in tiles.get_tiles_by_type(assets.tile("""...""")):
-    cookie_sprite = sprites.create(img"""...""", SpriteKind.enemy)
+    cookie_sprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_tile(cookie_sprite, value2)
     tiles.set_tile_at(value2, assets.tile("""transparency16"""))
 
@@ -483,12 +483,12 @@ Add a timer to your game! Decrease the timer by 5 seconds every time your Player
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 info.start_countdown(30)
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -501,22 +501,22 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 
 # enemy sprites
 for value2 in tiles.get_tiles_by_type(assets.tile("""...""")):
-    cookie_sprite = sprites.create(img"""...""", SpriteKind.enemy)
+    cookie_sprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_tile(cookie_sprite, value2)
     tiles.set_tile_at(value2, assets.tile("""transparency16"""))
 
@@ -551,12 +551,12 @@ Edit your tilemap to include a few new **hazard** tiles that will reset the Play
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 tiles.set_current_tilemap(tilemap("""level"""))
 info.start_countdown(30)
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -569,22 +569,22 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 
 # enemy sprites
 for value2 in tiles.get_tiles_by_type(assets.tile("""...""")):
-    cookie_sprite = sprites.create(img"""...""", SpriteKind.enemy)
+    cookie_sprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_tile(cookie_sprite, value2)
     tiles.set_tile_at(value2, assets.tile("""transparency16"""))
 
@@ -622,7 +622,7 @@ Use a splash screen to display a message at the beginning of the game, letting t
 
 ```python
 # game initialization
-scene.set_background_image(img"""...""")
+scene.set_background_image(img("""..."""))
 game.splash("Oh no!", "Santa lost his presents!")
 game.splash("Collect all the presents", "before the time runs out!")
 game.splash("Avoid the milk and cookies", "they take away time!")
@@ -630,7 +630,7 @@ tiles.set_current_tilemap(tilemap("""level"""))
 info.start_countdown(30)
 
 # player sprite
-player_sprite = sprites.create(img"""...""", SpriteKind.player)
+player_sprite = sprites.create(img("""..."""), SpriteKind.player)
 tiles.place_on_tile(player_sprite, tiles.get_tile_location(0, 6))
 controller.move_sprite(player_sprite, 100, 0)
 scene.camera_follow_sprite(player_sprite)
@@ -643,22 +643,22 @@ def on_a_pressed():
 controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
 
 def on_right_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 def on_left_pressed():
-    player_sprite.set_image(img"""...""")
+    player_sprite.set_image(img("""..."""))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 
 # food sprites
 for value in tiles.get_tiles_by_type(assets.tile("""...""")):
-    present_sprite = sprites.create(img"""...""", SpriteKind.food)
+    present_sprite = sprites.create(img("""..."""), SpriteKind.food)
     tiles.place_on_tile(present_sprite, value)
     tiles.set_tile_at(value, assets.tile("""transparency16"""))
 
 # enemy sprites
 for value2 in tiles.get_tiles_by_type(assets.tile("""...""")):
-    cookie_sprite = sprites.create(img"""...""", SpriteKind.enemy)
+    cookie_sprite = sprites.create(img("""..."""), SpriteKind.enemy)
     tiles.place_on_tile(cookie_sprite, value2)
     tiles.set_tile_at(value2, assets.tile("""transparency16"""))
 
