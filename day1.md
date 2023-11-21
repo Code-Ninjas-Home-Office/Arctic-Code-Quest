@@ -211,7 +211,7 @@ Make something happen when the Player sprite runs into the Food sprite using an 
 
 - :paper plane: To make it easier to use the ``||sprites:on_overlap||`` function, click on ``||sprites:Sprites||`` in the code menu, then select this block and drag it into the coding canvas beneath the existing code:
 ![code](https://github.com/Code-Ninjas-Home-Office/arctic-code-quest/blob/master/images/overlap%20code%20python.png?raw=true "overlap code image")
-- :mouse pointer: def means define, and defines the overlap function with 2 parameters: sprite and otherSprite. The code after the colon will run whenever the function is called.
+- :mouse pointer: ``||sprites:def||`` means define, and defines the overlap function with 2 parameters: sprite and otherSprite. The code after the colon will run whenever the function is called.
 - :paper plane: On the line where the ``||sprites:on_overlap||`` function is called (*not where it is defined!*) replace the second ``||sprites:SpriteKind.player||`` with ``||sprites:SpriteKind.food||`` to make something happen when those 2 sprite kinds overlap. 
 - :paper plane: Inside the function definition, delete the word "pass" then type ``||sprites:otherSprite||`` to reference the Food sprite, followed by a dot operator ``||sprites:.||`` and the ``||sprites:set_position||`` function.
 - :calculator: To set the Food sprite to a random position after each overlap, use ``||math:randint||`` for both the x and y parameters, setting the low and high range as 0 and 160 for x and 0 and 120 for y.
