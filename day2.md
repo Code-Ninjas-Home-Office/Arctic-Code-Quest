@@ -1,4 +1,4 @@
-# Arctic Code Quest: Day 2
+# Polar Programming with Python: Day 2
 ### @diffs true
 
 ```python
@@ -48,7 +48,7 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
 
 
-## Arctic Code Quest: Python Edition - Day 2! @showdialog
+## Polar Programming with Python - Day 2! @showdialog
 
 Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus score and life variables and functions, game update loops, music, and game over effects. 
 
