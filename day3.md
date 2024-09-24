@@ -1,4 +1,4 @@
-# Arctic Code Quest: Day 3 
+# Polar Programming with Python: Day 3 
 ### @diffs true
 
 ```python
@@ -70,7 +70,7 @@ scene.on_overlap_tile(SpriteKind.player, assets.tile"""...""", on_overlap_tile)
 }
 ```
 
-## Arctic Code Quest: Python Edition - Day 3! @showdialog
+## Polar Programming with Python - Day 3! @showdialog
 
 Welcome to your next Python project code along! Today you will be creating a project using everything you have learned so far, plus tilemaps, tilemap functions, and for loops! 
 
