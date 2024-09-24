@@ -1,4 +1,4 @@
-# Arctic Code Quest: Day 1
+# Polar Programming with Python: Day 1
 ### @diffs true
 
 ```python
@@ -29,7 +29,7 @@ def on_overlap2(sprite, otherSprite):
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_overlap2)
 ```
 
-## Arctic Code Quest: Python Edition - Day 1! @showdialog
+## Polar Programming with Python - Day 1! @showdialog
 
 Welcome to your first Python project code along! Today you will be creating a project with a background image, 3 different sprites positioned across the screen, and 2 overlap functions that make something happen when the different sprites collide! 
 
